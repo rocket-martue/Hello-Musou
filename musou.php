@@ -2,12 +2,13 @@
 /**
  * @package Hello_Musou
  * @version 0.0.1
- */
-/*
-Plugin Name: Hello Musou
-Description: This is not just a plugin, When activated you will randomly see a text from <cite>Musou text</cite> in the upper right of your admin screen on every page.
-Author: Rocket Martue
-Version: 0.0.1
+ *
+ * Plugin Name: Hello Musou
+ * Description: This is not just a plugin, When activated you will randomly see a text from <cite>Musou text</cite> in the upper right of your admin screen on every page.
+ * Author: Rocket Martue
+ * Version: 0.0.1
+ * License: GNU General Public License v3.0
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 function hello_musou_get_text() {
