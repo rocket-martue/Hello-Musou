@@ -13,6 +13,6 @@ This is not just a plugin, When activated you will randomly see a text from <cit
 
 == Installation ==
 
-1. Upload `MW WP Form` to the `/wp-content/plugins/` directory
+1. Upload `Hello Musou` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. You can create a form by settings page.
