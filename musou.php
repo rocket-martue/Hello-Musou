@@ -16,7 +16,11 @@ function hello_musou_get_text() {
 	$plugin_path = plugin_dir_path( __FILE__ );
 
 	/** These are the texts to Hello musou **/
-	$filename = $plugin_path . 'musou.txt';
+	if ( file_exists( WP_CONTENT_DIR . '/musou.txt' ) ) {
+		$filename = WP_CONTENT_DIR . '/musou.txt';
+	} else {
+		$filename = $plugin_path . 'musou-sample.txt';
+	}
 	$musou_text = file_get_contents( $filename );
 
 	// Here we split it into lines.
