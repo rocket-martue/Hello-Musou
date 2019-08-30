@@ -1,13 +1,10 @@
 <?php
 /**
- * @package Hello_Musou
- * @version 0.1.4
- *
  * Plugin Name: Hello Musou
  * Plugin URI: https://github.com/rocket-martue/Hello-Musou
  * Description: This is not just a plugin, When activated you will randomly see a text from <cite>Musou text</cite> in the upper right of your admin screen on every page.
  * Author: Rocket Martue
- * Version: 0.0.1
+ * Version: 0.1.4
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
