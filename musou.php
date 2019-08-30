@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Hello_Musou
- * @version 0.1.3
+ * @version 0.1.4
  *
  * Plugin Name: Hello Musou
  * Plugin URI: https://github.com/rocket-martue/Hello-Musou

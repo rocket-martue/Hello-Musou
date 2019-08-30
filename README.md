@@ -1,5 +1,5 @@
 === Hello Musou ===
-- Stable tag: 0.1.3
+- Stable tag: 0.1.4
 - Tested up to: 5.2
 - Requires at least: 4.6
 
@@ -20,6 +20,9 @@ This is not just a plugin, When activated you will randomly see a text from <cit
 3. If you want to customize the display text, upload `wp-content / musou.txt`.
 
 == Changelog ==
+
+= 0.1.4 =
+2019 08 31 Update `musou-sample.txt`
 
 = 0.1.3 =
 2019 08 23 Update `musou-sample.txt`
