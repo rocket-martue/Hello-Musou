@@ -1,6 +1,6 @@
-=== Hello Musou ===
-- Stable tag: 0.1.5
-- Tested up to: 5.2.2
+﻿=== Hello Musou ===
+- Stable tag: 0.1.6
+- Tested up to: 5.2.3
 - Requires at least: 4.6
 
 == Description ==
@@ -20,6 +20,9 @@ This is not just a plugin, When activated you will randomly see a text from <cit
 3. If you want to customize the display text, upload `wp-content / musou.txt`.
 
 == Changelog ==
+
+= 0.1.6 =
+2019 09 16 Added load_plugin_textdomain
 
 = 0.1.5 =
 2019 08 31 Added custom update checker library

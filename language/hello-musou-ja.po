@@ -1,0 +1,81 @@
+# Copyright (C) 2019 Hello Musou
+# This file is distributed under the same license as the Hello Musou package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hello Musou 0.1.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/Hello-Musou\n"
+"POT-Creation-Date: 2019-09-15 22:15:48+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-09-16 07:17+0900\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja_JP\n"
+
+#: musou.php:46
+msgid "Quote from WP ZoomUP, by Musou:"
+msgstr "WP ZoomUP からの引用, by Musou:"
+
+#: plugin-update-checker/Puc/v4p7/Plugin/Ui.php:54
+msgid "View details"
+msgstr "詳細を見る"
+
+#: plugin-update-checker/Puc/v4p7/Plugin/Ui.php:77
+msgid "More information about %s"
+msgstr "%sについての詳細"
+
+#: plugin-update-checker/Puc/v4p7/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr "アップデートを確認する"
+
+#: plugin-update-checker/Puc/v4p7/Plugin/Ui.php:213
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr "%s プラグインは最新です。"
+
+#: plugin-update-checker/Puc/v4p7/Plugin/Ui.php:215
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr "%sプラグインの新しいバージョンが利用可能です。"
+
+#: plugin-update-checker/Puc/v4p7/Plugin/Ui.php:217
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr "%s で更新プログラムを使用できるかどうかを判断できませんでした。"
+
+#: plugin-update-checker/Puc/v4p7/Plugin/Ui.php:223
+msgid "Unknown update checker status \"%s\""
+msgstr "不明なアップデートチェッカーステータス \"％s\""
+
+#: plugin-update-checker/Puc/v4p7/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr "利用可能な変更ログはありません。"
+
+#. Plugin Name of the plugin/theme
+msgid "Hello Musou"
+msgstr "Hello Musou"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/rocket-martue/Hello-Musou"
+msgstr "https://github.com/rocket-martue/Hello-Musou"
+
+#. Description of the plugin/theme
+msgid ""
+"This is not just a plugin, When activated you will randomly see a text from "
+"<cite>Musou text</cite> in the upper right of your admin screen on every "
+"page.By default, this plugin reads `musou-sample.txt` in the plugin "
+"directory.If you want to customize the display text, upload `wp-content / "
+"musou.txt`."
+msgstr ""
+"これは単なるプラグインではありません。このプラグインを有効化すると、すべての"
+"管理画面の右上に <cite>Musou text</cite> からのテキストがランダムに表示され"
+"ます。デフォルトでは、プラグインディレクトリの `musou-sample.txt` が読み込ま"
+"れます。表示内容をカスタマイズする場合は `/wp-content/musou.text` をアップ"
+"ロードしてください。"
+
+#. Author of the plugin/theme
+msgid "Rocket Martue"
+msgstr "Rocket Martue"

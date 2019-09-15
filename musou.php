@@ -2,12 +2,20 @@
 /**
  * Plugin Name: Hello Musou
  * Plugin URI: https://github.com/rocket-martue/Hello-Musou
- * Description: This is not just a plugin, When activated you will randomly see a text from <cite>Musou text</cite> in the upper right of your admin screen on every page.
+ * Description: This is not just a plugin, When activated you will randomly see a text from <cite>Musou text</cite> in the upper right of your admin screen on every page.By default, this plugin reads `musou-sample.txt` in the plugin directory.If you want to customize the display text, upload `wp-content / musou.txt`.
  * Author: Rocket Martue
- * Version: 0.1.5
+ * Version: 0.1.6
+ * Text Domain: hello-musou
+ * Domain Path: /languages/
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
+
+// Load the plugin's text domain
+function hello_musou_init() {
+	load_plugin_textdomain( 'hello-musou', false, dirname( plugin_basename(__FILE__) ) . '/language' );
+}
+add_action( 'plugins_loaded', 'hello_musou_init' );
 
 function hello_musou_get_text() {
 	$plugin_path = plugin_dir_path( __FILE__ );
