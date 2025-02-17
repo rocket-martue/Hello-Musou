@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/rocket-martue/Hello-Musou
  * Description: This is not just a plugin, When activated you will randomly see a text from <cite>Musou text</cite> in the upper right of your admin screen on every page.By default, this plugin reads `musou-sample.txt` in the plugin directory.If you want to customize the display text, upload `wp-content / musou.txt`.
  * Author: Rocket Martue
- * Version: 0.1.6
+ * Version: 0.2.0
  * Text Domain: hello-musou
  * Domain Path: /languages/
  * Update URI: https://github.com/rocket-martue/Hello-Musou/releases
