@@ -22,7 +22,6 @@ function hello_musou_init() {
 }
 add_action( 'plugins_loaded', 'hello_musou_init' );
 
-
 /**
  * Retrieves a specific text string.
  *
@@ -40,11 +39,7 @@ function hello_musou_get_text() {
 	} else {
 		$filename = $plugin_path . 'musou-sample.txt';
 	}
-	$response = wp_remote_get( $filename );
-	if ( is_wp_error( $response ) ) {
-		return 'Error retrieving text';
-	}
-	$musou_text = wp_remote_retrieve_body( $response );
+	$musou_text = file_get_contents( $filename );
 
 	// Here we split it into lines.
 	$musou_text = explode( "\n", $musou_text );

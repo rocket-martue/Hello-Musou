@@ -22,7 +22,7 @@ This is not just a plugin, When activated you will randomly see a text from <cit
 == Changelog ==
 
 = 0.2.0 =
-2025 02 17 Change the upload location of `musou.text`.
+2025 02 17 Change the upload location of custom `musou.text`.
 
 = 0.1.6 =
 2019 09 16 Added load_plugin_textdomain.
