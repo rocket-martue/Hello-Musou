@@ -7,35 +7,57 @@
  * Version: 0.1.6
  * Text Domain: hello-musou
  * Domain Path: /languages/
+ * Update URI: https://github.com/rocket-martue/Hello-Musou/releases
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
-*/
 
-// Load the plugin's text domain
+ * @package Hello-Musou
+ */
+
+/**
+ * Load the plugin's text domain.
+ */
 function hello_musou_init() {
-	load_plugin_textdomain( 'hello-musou', false, dirname( plugin_basename(__FILE__) ) . '/language' );
+	load_plugin_textdomain( 'hello-musou', false, dirname( plugin_basename( __FILE__ ) ) . '/language' );
 }
 add_action( 'plugins_loaded', 'hello_musou_init' );
 
+
+/**
+ * Retrieves a specific text string.
+ *
+ * This function returns a predefined text string. It can be used to
+ * demonstrate basic function documentation.
+ *
+ * @return string The text string "Hello, Musou!".
+ */
 function hello_musou_get_text() {
 	$plugin_path = plugin_dir_path( __FILE__ );
 
-	/** These are the texts to Hello musou **/
-	if ( file_exists( WP_CONTENT_DIR . '/musou.txt' ) ) {
-		$filename = WP_CONTENT_DIR . '/musou.txt';
+	/** These are the texts to Hello musou */
+	if ( file_exists( WP_CONTENT_DIR . '/uploads/musou.txt' ) ) {
+		$filename = WP_CONTENT_DIR . '/uploads/musou.txt';
 	} else {
 		$filename = $plugin_path . 'musou-sample.txt';
 	}
-	$musou_text = file_get_contents( $filename );
+	$response = wp_remote_get( $filename );
+	if ( is_wp_error( $response ) ) {
+		return 'Error retrieving text';
+	}
+	$musou_text = wp_remote_retrieve_body( $response );
 
 	// Here we split it into lines.
 	$musou_text = explode( "\n", $musou_text );
 
 	// And then randomly choose a line.
-	return wptexturize( $musou_text[ mt_rand( 0, count( $musou_text ) - 1 ) ] );
+	return wptexturize( $musou_text[ wp_rand( 0, count( $musou_text ) - 1 ) ] );
 }
 
-// This just echoes the chosen line, we'll position it later.
+/**
+ * This just echoes the chosen line, we'll position it later.
+ *
+ * @return void
+ */
 function hello_musou() {
 	$chosen = hello_musou_get_text();
 	$lang   = '';
@@ -45,9 +67,9 @@ function hello_musou() {
 
 	printf(
 		'<p id="musou"><span class="screen-reader-text">%s </span><span dir="ltr"%s>%s</span></p>',
-		__( 'Quote from WP ZoomUP, by Musou:', 'hello-musou' ),
-		$lang,
-		$chosen
+		esc_html__( 'Quote from WP ZoomUP, by Musou:', 'hello-musou' ),
+		esc_attr( $lang ),
+		esc_html( $chosen )
 	);
 }
 
@@ -55,6 +77,15 @@ function hello_musou() {
 add_action( 'admin_notices', 'hello_musou' );
 
 // We need some CSS to position the paragraph.
+/**
+ * Enqueues the Musou CSS stylesheet.
+ *
+ * This function is responsible for adding the Musou CSS file to the WordPress
+ * theme or plugin. It ensures that the stylesheet is properly enqueued and
+ * available for use on the front-end of the site.
+ *
+ * @return void
+ */
 function musou_css() {
 	echo "
 	<style type='text/css'>
@@ -84,10 +115,3 @@ function musou_css() {
 }
 
 add_action( 'admin_head', 'musou_css' );
-
-require 'plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/rocket-martue/Hello-Musou/',
-	__FILE__,
-	'musou'
-);
